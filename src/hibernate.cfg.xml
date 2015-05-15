@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory >
+		<!-- 在当前的线程中寻找Session，存在直接取，不存在创建新的 -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@172.18.85.102:1521:orcl</property>
+		<property name="connection.username">scott</property>
+		<property name="connection.password">tiger</property>
+		<!-- 打印sql语句 -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+		<mapping class="user.bean.User" />
+		
+	</session-factory>
+</hibernate-configuration>
