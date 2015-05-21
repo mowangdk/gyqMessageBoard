@@ -32,14 +32,33 @@
     <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
 
   	<package name="user" namespace="/user" extends="struts-default">
-  			<action name="message">
-  					<result>/messageboard/message.html</result>
-  			</action>
   			<action name="getRegistform">
   					<result>/jsps/regist.jsp</result>
   			</action>
- 			<!-- <action name="regist" class="user.controller">
- 				<result name="success"></result>
-  			</action> -->
+ 			<action name="user.*" class="user.controller.RegistAction" method="{1}">
+ 				<result name="success">/messageboard/addMessage.html</result>
+  			</action> 
+  		
+ 	</package>
+ 	<package name="message" namespace="/message" extends="struts-default">
+ 		
+ 		<interceptors>
+ 			<interceptor name="MessageInterceptor" class="message.controller.interceptor.MessageInterceptor">
+ 			</interceptor>
+ 			<interceptor-stack name="permission">
+ 				<interceptor-ref name="defaultStack"></interceptor-ref>
+ 				<interceptor-ref name="MessageInterceptor"></interceptor-ref>
+ 			</interceptor-stack>	
+ 		</interceptors>
+ 		<action name="getaddmessagepage">
+ 			<result>/jsps/addmessage.jsp</result>
+ 		</action>
+ 		<action name="addmessage" class="message.controller.MessageAction" >
+ 			<result name="success" type="chain">showmessage</result>
+ 		</action>
+ 		<action name="showmessage" class="message.controller.ShowMessage">
+ 			<result name="success">/jsps/index.jsp</result>
+ 		</action>
+ 	
  	</package>
 </struts>

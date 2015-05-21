@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<validation-config lang="auto">
+	<form id="addMessageForm" show-error="alert" show-type="all">
+		<field name="userName" display-name="用户名" onfail="">
+			<depend name="required" />
+			<depend name="maxLength" param0="10"/>
+		</field>
+		<field name="userMail" display-name="邮箱" onfail="">
+			<depend name="required" />
+			<depend name="maxLength" param0="50"/>
+			<depend name="email" />
+		</field>
+		<field name="url" display-name="个人主页" onfail="">
+			<depend name="maxLength" param0="100"/>
+		</field>
+		<field name="qq" display-name="QQ" onfail="">
+			<depend name="maxLength" param0="20"/>
+			<depend name="integer" />
+		</field>
+		<field name="content" display-name="留言内容" onfail="">
+			<depend name="required" />
+			<depend name="maxLength" param0="1000"/>
+		</field>
+	</form>
+</validation-config>

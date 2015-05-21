@@ -1,0 +1,159 @@
+body { 
+font-size: 12px;text-align:center;OVERFLOW-X: hidden; MARGIN: 0px; FONT-SIZE: 12px; FONT-WEIGHT: lighter; TEXT-DECORATION: none
+}
+a,a:visited{font-size: 12px;color:#000;font-weight:normal;border:none;text-decoration:none;}
+a:hover{
+	color:#C00;
+	font-size: 12px;
+	border:none;
+}/*继承倾斜属性、鼠标滑过文字颜色红色、下划线*/
+#z12 a,a:visited{color:#FFF;text-decoration:none;	font-weight: bold;font-size: 14px;border:none;}/*倾斜、链接文字，访问过文字颜色蓝色、无装饰线*/
+
+#zhu{
+	 width:980px; margin:0px atuo;
+}
+#z1_1_2 {
+	font-size: 12px;
+	color: #FFF;
+}
+#z1_1 {
+	height:200px; background-image:url(logobeijing.gif)
+}
+#z2_1_1_6 a,a:visited{
+	
+}
+#z1_1_1 {
+	height:25px; width:800px; display:inline;float:right; background-image:url(logolantiao.gif);background-repeat:no-repeat;
+}
+#z1_1_1_1 {
+display:inline;float:left; color: #FFF; font-size: 12px; margin:5PX auto auto 10PX;}
+#z2_1_1_1{
+height:50px; padding-top:10px
+}
+#z1_1_1_2_1 {
+display:inline;float:right; color: #FFF; font-size: 12px;margin:2PX 10PX auto auto}
+#z1_1_1_2_2 {
+display:inline;float:right; color: #FFF; font-size: 12px;margin:5PX 10PX auto auto}
+#z1_1_1_2 a{
+font-size: 12px;}
+#z1_1_1_3 {
+	text-align:left; padding:55px 0 0 35px
+}
+#z12 {
+	height:35px;  background-image:url(daohangbeijing.gif);
+}
+#z2_1 {
+	width:195px;display:inline;float:left; background-image:url(zuocebeij.gif)
+}
+#z2_1_1_6 {
+	height:125px; background-image:url(zuo1.gif);background-repeat:no-repeat; background-position: center top; margin-top:10px;
+}
+#z2_1_1_2 {
+	width:195px;display:inline;float:left; background-image:url(zuocebeij.gif)
+}
+#z2_1_2{
+	height:280px;background-image:url(zuo2.gif);background-repeat:no-repeat; background-position: center top; 
+}
+#z2_1_2_1{
+	height:42px; padding-top:10px; padding-left:50px; font-weight: bold; font-size: 14px;
+}
+#z2_1_2 ul{
+	list-style:none;margin:0px;padding:0;color: #29799C;
+}
+#z2_1_2 ul li{
+	margin:0px auto 24px auto;
+}
+#z2_1_2 ul li A,a:visited{
+	color:#4A658C; font-weight: bold; font-size: 14px;
+}
+#z2_1_5 {
+	height:290px;background-image:url(zuo5.gif);background-repeat:no-repeat; background-position: center top; 
+}
+#z2_1_5 ul{
+	list-style:none;margin:0px;padding:0;
+}
+#z2_1_5 ul li{
+	margin:auto auto 8px auto;
+}
+#z2_1_2_1{
+height:20px; padding-top:10px; margin-left:20px; font-weight: bold; font-size: 14px; text-align: left;	
+}
+#z2_1_6{
+	height:155px; background-image:url(zuo6.gif); background-repeat:no-repeat; background-position: center top; padding:8px
+}
+#z2_1_6_1{
+	margin:auto auto auto 40px; text-align: left; font-weight: bold; font-size: 14px;
+}
+#z2_1_6 select{
+	width:130px; margin:5px
+}
+#z3_2{
+	width:570px;display:inline;float:left;
+}
+#z3_2 a,a:visited{font-size: 12px;color:#000;font-weight:normal;border:none;text-decoration:none;}
+#z3_2 a:hover{
+	color:#C00;
+	font-size: 12px;
+	border:none;}
+#z3_1_1_4{
+	display:inline;float:left; margin:3px 0 auto 28px
+}
+#z3_1_1_4 .container { height:160px;}
+#z3_1_1_4 .container img{border:0;vertical-align:top;} #切换图片的样式
+#z3_1_1_4 .container ul{
+list-style:none;margin:0px;padding:0;
+}
+#z3_1_1_4  .container li{list-style:none;margin:0;padding:0;}
+#z3_1_1_4 .num{ position:absolute; right:5px; bottom:5px; font:12px/1.5 tahoma, arial; height:18px;}
+#z3_1_1_4 .num li{
+	float: left;
+	color: #d94b01;
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 11px;
+	cursor: pointer;
+	margin-left: 3px;
+	border: 1px solid #f47500;
+	background-color: #fcf2cf;
+}
+#z3_1_1_4 .num li.on{
+	line-height: 18px;
+	width: 18px;
+	height: 18px;
+	font-size: 14px;
+	margin-top:-2px;
+	background-color: #ff9415;
+	font-weight: bold;
+	color:#FFF;
+}
+.container, .container img{width:200px; height:160px;} #切换图片的样式
+.container img{border:0;vertical-align:top;}
+.container ul, .container li{list-style:none;margin:0;padding:0;}
+
+.num{ position:absolute; right:5px; bottom:5px; font:12px/1.5 tahoma, arial; height:18px;}
+.num li{
+	float: left;
+	color: #d94b01;
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 11px;
+	cursor: pointer;
+	margin-left: 3px;
+	border: 1px solid #f47500;
+	background-color: #fcf2cf;
+}
+.num li.on{
+	line-height: 18px;
+	width: 18px;
+	height: 18px;
+	font-size: 14px;
+	margin-top:-2px;
+	background-color: #ff9415;
+	font-weight: bold;
+	color:#FFF;

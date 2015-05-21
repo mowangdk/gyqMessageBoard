@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+
+<link href="images/sy.css" rel="stylesheet" type="text/css" />
+<link href="images/liebiao.css" rel="stylesheet" type="text/css" />
+<title>哈拉盖图政务门户网站</title>
+<script type="text/javascript"src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+   function saveMessage(){
+	var title=document.getElementById("message.mtitle").value;
+	if(title.length<1){ alert("留言标题不能为空，请输入"); return;}
+	var content=document.getElementById("message.mcontent").value;
+	if(content.length<1){ alert("留言内容不能为空，请输入"); return;}
+	if(content.length>200){alert("留言内容不能超过200字，请删减");return;}
+	document.addMessageForm.submit();
+   }
+   
+
+   $(document).ready(function(){
+       $('#form1').submit(function() {
+            jQuery.ajax({
+                url:'',
+                data:$('#form1').serialize(),
+                type:"POST",
+                beforeSend:function(){
+                    $('#login').hide();
+                    $('#logMessage').hide();
+                },
+                success:function(){
+                    $('#form1').hide();
+                    $('#logMessage').show();
+                }
+
+            })
+
+       })
+
+
+
+   })
+   
+</script>
+</head>
+
+<body>
+<div id="zhu" style="margin:0 auto"> 
+
+<div id="z1_1" >
+   	<div  id="z1_1_1">
+   	   
+        <div id="z1_1_1_1" style="">今天是2011年11月30日 星期三</div>
+         <div id="z1_1_1_2"  style="">
+         <div id="z1_1_1_2_1"> <img src="images/logo1_1.gif" align="absmiddle"/>
+         <div id="logMessage">欢迎你：${"user.username"}</div>
+         <form method="post" id="form1" >
+         	<input type="text" name="textfield" style=" height:12px;font-size: 10px;"/>
+         	<input type="password" name="textfield" style=" height:12px;font-size: 10px;" />
+         	<input type="button" value="登陆" style="height:20px" id="login"/>
+         </form>
+  </div>
+
+
+  </div>
+  
+<table width="100%" border="0" align="center" cellpadding="0"
+	cellspacing="0">
+	<tr>
+		<td valign="top">
+		<table width="99%" border="0" align="center" cellpadding="0"
+			cellspacing="0" class="lycss">
+			<tr>
+				<td colspan="2" align="left" class="lycss11"><img
+					src="images/regli.gif" width="9" height="9" /> 留言板</td>
+			</tr>
+			<tr>
+				<td width="208" valign="top" class="lycssth">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="13" background="images/ti1.gif"></td>
+							</tr>
+							<tr>
+								<td height="47" align="center" valign="middle"
+									background="images/ti3.gif"><a href="message/toAddMessage.do">我要留言</a></td>
+							</tr>
+							<tr>
+								<td height="14" background="images/ti2.gif"></td>
+							</tr>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="13" background="images/ti1.gif"></td>
+							</tr>
+							<tr>
+								<td height="47" align="center" valign="middle"
+									background="images/ti4.gif"><a href="message/listMessage.do">全部留言</a></td>
+
+
+							</tr>
+							<tr>
+								<td height="13" background="images/ti2.gif"></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+
+				</table>
+				</td>
+				<td width="891" valign="top" class="lycssbj">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="9%"><img src="images/cy2.gif" width="50"
+									height="42" /></td>
+								<td width="71%" class="title1">发布留言</td>
+								<td width="20%"></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="23%" height="4" bgcolor="#BEBEBE"></td>
+								<td width="77%" bgcolor="#E4E4E4"></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td height="8"></td>
+					</tr>
+				</table>
+				<table width="99%" height="93" border="0" align="right"
+					cellpadding="0" cellspacing="0">
+
+					<tr>
+						<td align="left" valign="top">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="5"></td>
+							</tr>
+						</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="5"></td>
+							</tr>
+						</table>
+						<!-- 留言栏结束-->
+	<form action="message/addMessage.do" method="post"  name="addMessageForm" id="addMessageForm">		
+	<tag:token name="token.addMessage"/>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="30">
+          <table class="gridView" id="ctl00_ContentPlaceHolder2_GridView1" 
+      style="WIDTH: 100%; BORDER-COLLAPSE: collapse; font-size:12px" cellspacing="0" rules="all" 
+      border="0">
+            <tbody>
+              <tr>
+                <th class="gridViewHeader" style="WIDTH: 50px; size:12px" scope="col">1</th>
+                <th class="gridViewHeader" scope="col">留言标题</th>
+                <th class="gridViewHeader" scope="col" align="left"><input type="text" name="message.mtitle" id="message.mtitle" /></th>
+              </tr>
+             <tr>
+                <th class="gridViewHeader" style="WIDTH: 50px; size:12px" scope="col">2</th>
+                <th class="gridViewHeader" scope="col">留言内容</th>
+                <th class="gridViewHeader" scope="col" align="left"><textarea name="message.mcontent" cols="80" rows="5" id="message.mcontent"></textarea></th>
+              </tr>
+              <tr>
+                <td colspan="3" class="gridViewItem" align="center">
+                
+                <input id="okBtn" value="发布留言"  onclick="saveMessage()" class="buttonSmall buttonAdd"  type="button"/> ||
+				 <input id="cancelBtn" value="取消留言" onclick="Util.url.back()"  class="buttonSmall buttonAdd"  type="button"/> ||
+		 
+		
+                
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </td>
+  </tr>
+</table>						
+	</form>					
+						
+						
+						</td>
+					</tr>
+				</table>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+
+
+<div id="z3_1" style=" width:100%;display:inline;float:left;height:100px; background-image:url(images/dibu.gif); padding-top:10px">
+        <p>蒙 ICP 备06002797号 </p>
+        <p>主办单位 ******** 承办单位：******* <br />
+    		备案编号：06010279号        </p>
+  </div>
+</div>
+</div>
+</body>
+</html>

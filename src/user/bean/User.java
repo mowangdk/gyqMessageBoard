@@ -1,11 +1,12 @@
 package user.bean;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
-import javax.persistence.TableGenerator;
 
 @Entity(name = "UserB")
 @SequenceGenerator(name="userGenerator",sequenceName="HIBERNATE_SEQUENCE")
@@ -14,6 +15,18 @@ public class User {
 	private String username;
 	private String userpass;
 	private String uname;
+	private Date birthday;
+	private String email;
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -71,16 +84,12 @@ public class User {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-
-	public User(String username, String userpass, String uname, int isadmin,
-			String remark) {
-		super();
-
-		this.username = username;
-		this.userpass = userpass;
-		this.uname = uname;
-		this.isadmin = isadmin;
-		this.remark = remark;
+	public Date getBirthday() {
+		return birthday;
 	}
 
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+	
 }
