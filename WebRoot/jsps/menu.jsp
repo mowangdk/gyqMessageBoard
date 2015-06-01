@@ -12,7 +12,7 @@
 			<tr>
 				<td align="center">
 					<a href="<c:url value='/message/getaddmessagepage.do' />"><img src="${pageContext.request.contextPath}/jsps/images/write.gif" border="0"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="<c:url value='/message/showmessage.do' />"><img src="${pageContext.request.contextPath}/jsps/images/read.gif" border="0"></img></a>
+					<a href="<c:url value='/message/showmessage.do?pi.page=1' />"><img src="${pageContext.request.contextPath}/jsps/images/read.gif" border="0"></img></a>
 				</td>
 			</tr>
 		</table>

@@ -13,9 +13,10 @@
 		<!-- 打印sql语句 -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
-		<!-- <property name="hbm2ddl.auto">create</property>  -->
+	  <!--   <property name="hbm2ddl.auto">create</property> -->
 		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
 		<!-- <mapping class="user.bean.User" /> -->
 		<mapping class="message.bean.Message"/>
+		<mapping class="message.bean.ReMessage" />
 	</session-factory>
 </hibernate-configuration>

@@ -78,7 +78,70 @@ td
 	border-left-color: #666666;
 }
 #messageboard{
+	margin-left:21.9%;
+	width:718px;
 	padding-left: 40px;
-	border: solid;
+	border: thin solid;
 	border-color:black;
+	height: 200px;
+}
+#headpic{
+	border: thin solid;
+	width:200px;
+	margin-left:-40px;
+	height:100px;
+}
+#picture{
+
+
+	position:relative;
+	left:50px;
+}
+#uname{
+
+
+	border: thin solid;
+	border-color: red;
+	width:200px;
+	margin-left:-40px;
+	height:97px;
+	text-align: center;
+}
+#topic{
+
+
+	width:555px;
+	height:20px;
+	margin-left:162px;
+	margin-top:-202px;
+	border-color:blue;
+	border: thin solid;
+	text-align: center;
+}
+#content1{
+	width:555px;
+	height:180px;
+	border: thin solid;
+	margin-left:162px;
+	border-color:blue;
+	background-color: grey;
+}
+#Recontent{
+	width:450px;
+	height:100px;
+	margin:50px;
+	background-color: green;
+}
+#admintable{
+	border:solid 1px red;
+	border-color: blue;
+	
+	
+	
+}
+#pageSplit{
+	width:758px;
+	height:70px;
+	border: thin solid;
+	margin-left:21.9%;
 }

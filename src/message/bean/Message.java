@@ -1,15 +1,23 @@
 package message.bean;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity
 @SequenceGenerator(name="userGenerator",sequenceName="HIBERNATE_SEQUENCE")
 public class Message {
+	    private static final long serialVersionUID = 1L;
 		private int id;
 		private String userName;
 		private String userMail;
@@ -18,22 +26,24 @@ public class Message {
 		private String content;
 		private int face;
 		private int pic;
-		private int showed;
 		private String postDate;
 		private String userIP;
+		private Set<ReMessage> rmessages = new HashSet<ReMessage>();
 		
+		@OneToMany(cascade={CascadeType.ALL}
+						,fetch=FetchType.EAGER)
+		@JoinColumn(name="message_id")
+		public Set<ReMessage> getRmessages() {
+			return rmessages;
+		}
+		public void setRmessages(Set<ReMessage> rmessages) {
+			this.rmessages = rmessages;
+		}
 		public String getUserIP() {
 			return userIP;
 		}
 		public void setUserIP(String userIP) {
 			this.userIP = userIP;
-		}
-		@Column(columnDefinition="int(10) default 0",nullable=false)
-		public int getShowed() {
-			return showed;
-		}
-		public void setShowed(int showed) {
-			this.showed = showed;
 		}
 		public String getPostDate() {
 			return postDate;

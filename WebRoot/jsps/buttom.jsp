@@ -8,14 +8,14 @@
 		
 	</head>
 	<body>
-		<table border="0" cellspacing=0 cellpadding=0 align="center" width="760" height="10px" class="grayline">
+		<table border="0" cellspacing=0 cellpadding=0 align="center" width="760" height="10px" class="grayline" style="float:none;">
 			<tr>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
   				<td height=37 background="${pageContext.request.contextPath}/jsps/images/down.gif" align="center">
-  					Copyright © 2009 coolszy版权所有
-  					<a href="http://coolszy.javaeye.com" target="_blank">http://coolszy.javaeye.com</a>
+  					Copyright © 2015 geyingqi版权所有
+  					<a href="http://geyingqi0701.tk" target="_blank">Geyingqi0701.tk</a>
   				</td>
 			</tr>
 		</table>

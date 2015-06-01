@@ -38,7 +38,6 @@
  			<action name="user.*" class="user.controller.RegistAction" method="{1}">
  				<result name="success">/messageboard/addMessage.html</result>
   			</action> 
-  		
  	</package>
  	<package name="message" namespace="/message" extends="struts-default">
  		
@@ -54,11 +53,25 @@
  			<result>/jsps/addmessage.jsp</result>
  		</action>
  		<action name="addmessage" class="message.controller.MessageAction" >
- 			<result name="success" type="chain">showmessage</result>
+ 			<result name="success">/jsps/menu.jsp</result>
  		</action>
- 		<action name="showmessage" class="message.controller.ShowMessage">
+ 		<action name="showmessage" class="message.controller.ShowMessage" method="execute">
  			<result name="success">/jsps/index.jsp</result>
  		</action>
  	
+ 	</package>
+ 	<package namespace="/admin" name="admins" extends="struts-default">
+		<action name="index" class="message.controller.ShowMessage" method="getAllMessage">
+				<result name="success">/admin/index.jsp</result>
+		</action> 	
+		<action name="delete" class="message.controller.DeleteAction">
+			<result name="success" type="chain">index</result>
+		</action>
+ 		<action name="replay" class="message.controller.MessageAction" method="repl">
+ 				<result name="success">/jsps/index.jsp</result>
+ 		</action>
+ 		<action name="detailMessage" class="message.controller.ShowMessage" method="getMessageById">
+ 			<result name="success">/admin/editormessage.jsp</result>
+ 		</action>
  	</package>
 </struts>
