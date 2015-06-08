@@ -62,7 +62,7 @@ public class MessageDao {
 		session.getTransaction().commit();
 	}
 
-	public String delete(int[] id) {
+	public void delete(int[] id) {
 		String hql = "";
 		//拼接sql语句，id之间用or来连接
 		for(int i=0; i<id.length;i++){
@@ -76,14 +76,12 @@ public class MessageDao {
 		System.out.println("delete from Message where "+hql);
 		session.beginTransaction();
 		Query q = session.createQuery("delete from Message where "+hql);
-		try{
+		
 		q.executeUpdate();
-		}catch(ConstraintViolationException e){
-			String sqlException = "该浏览有回复,请先删除该留言回复";
-			return sqlException;
-		}
+		
+		
 		session.getTransaction().commit();
-		return null;
+	
 	}
 
 	public Message getMessageById(int id) {
