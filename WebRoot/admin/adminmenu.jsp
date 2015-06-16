@@ -11,7 +11,7 @@
 			<tr>
 				<td align="center">
 					<a href="${pageContext.request.contextPath}/admin/index.do"><img src="${pageContext.request.contextPath}/jsps/images/admin_home.gif" border="0"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="${pageContext.request.contextPath}/admin/dispatch.do?method=manager"><img src="${pageContext.request.contextPath}/jsps/images/admin_setup.gif" border="0"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="${pageContext.request.contextPath}/admin/webinfo.do"><img src="${pageContext.request.contextPath}/jsps/images/admin_setup.gif" border="0"></img></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="${pageContext.request.contextPath}/admin/dispatch.do?method=logout"><img src="${pageContext.request.contextPath}/jsps/images/loginout.gif" border="0"></img></a>
 				</td>
 			</tr>

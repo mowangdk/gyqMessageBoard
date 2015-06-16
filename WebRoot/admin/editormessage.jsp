@@ -15,8 +15,7 @@
 	<table border="0" align="center" width="760" class="grayline">
 		<tr>
 			<td align=center>
-				<form
-					action="${pageContext.request.contextPath}/admin/replay.do?id=${ms.id}"
+				<form action="${pageContext.request.contextPath}/admin/replay.do?id=${ms.id}"
 					method="post">
 					<table width="600" border="1" cellpadding="3" bordercolor="#333333"
 						style="border-collapse: collapse;">

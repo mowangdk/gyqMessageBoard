@@ -76,10 +76,8 @@ public class MessageDao {
 		System.out.println("delete from Message where "+hql);
 		session.beginTransaction();
 		Query q = session.createQuery("delete from Message where "+hql);
-		
-		q.executeUpdate();
-		
-		
+		int i = q.executeUpdate();
+		System.out.println(i);
 		session.getTransaction().commit();
 	
 	}
@@ -108,5 +106,23 @@ public class MessageDao {
 		List<Message> list = q.list();
 		session.getTransaction().commit();
 		return list;
+	}
+
+	public void deleteRe(int[] id) {
+		String sql = "";
+		for(int i = 0;i<id.length;i++){
+			if(i==0){
+				sql = "message_id = "+id[i];
+			}else{
+				sql = sql + " or message_id = "+id[i];
+			}
+		}
+		
+		Session session =sf.getCurrentSession();
+		System.out.println("delete from ReMessage where "+sql);
+		session.beginTransaction();
+		Query q = session.createQuery("delete from ReMessage where "+sql);
+		q.executeUpdate();
+		session.getTransaction().commit();
 	}
 }

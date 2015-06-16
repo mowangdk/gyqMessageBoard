@@ -58,7 +58,6 @@ public class MessageAction extends ActionSupport {
 			
 		}
 		public String repl()throws Exception{
-			System.out.println(id);
 			ms.update(id, rmessage);
 			return SUCCESS;
 		}

@@ -30,15 +30,6 @@
     
     <!-- 支持页面使用静态方法和属性 -->
     <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
-
-  	<package name="user" namespace="/user" extends="struts-default">
-  			<action name="getRegistform">
-  					<result>/jsps/regist.jsp</result>
-  			</action>
- 			<action name="user.*" class="user.controller.RegistAction" method="{1}">
- 				<result name="success">/messageboard/addMessage.html</result>
-  			</action> 
- 	</package>
  	<package name="message" namespace="/message" extends="struts-default">
  		
  		<interceptors>
@@ -61,16 +52,29 @@
  	
  	</package>
  	<package namespace="/admin" name="admins" extends="struts-default">
+ 		<action name="login">
+ 			<result>/admin/login.jsp</result>
+ 		</action>
+ 		<action name="submitlogin" class="webinfo.user.controller.LoginAction" method="login">
+ 			<result name="success" type="chain">index</result>
+ 		</action>
 		<action name="index" class="message.controller.ShowMessage" method="getAllMessage">
 				<result name="success">/admin/index.jsp</result>
+				<result name="input">/admin/error.jsp</result>
 		</action> 	
 		<action name="delete" class="message.controller.DeleteAction">
-			<result name="success" type="chain">index</result>
+			<result name="success" type="redirect">index</result>
 		</action>
  		<action name="replay" class="message.controller.MessageAction" method="repl">
- 				<result name="success">/jsps/index.jsp</result>
+ 				<result name="success" type="chain">index</result>
  		</action>
  		<action name="detailMessage" class="message.controller.ShowMessage" method="getMessageById">
+ 			<result name="success">/admin/editormessage.jsp</result>
+ 		</action>
+ 		<action name="webinfo" class="webinfo.controller.WebAction" method="show">
+ 			<result name="success">/admin/manager.jsp</result>
+ 		</action>
+ 		<action name="modify" class="webinfo.controller.WebAction" method="update">
  			<result name="success">/admin/editormessage.jsp</result>
  		</action>
  	</package>

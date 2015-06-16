@@ -33,8 +33,9 @@ public class MessageService {
 		return messagedao.pageSplit((pageinfo.getPage()-1)*5, 5);
 	}
 	public void delete(int[] id) {
-		
+		messagedao.deleteRe(id);
 		messagedao.delete(id);
+	
 	}
 	public Message getMessageById(int id){
 		return messagedao.getMessageById(id);

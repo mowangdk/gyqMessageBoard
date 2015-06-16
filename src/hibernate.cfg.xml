@@ -18,5 +18,6 @@
 		<!-- <mapping class="user.bean.User" /> -->
 		<mapping class="message.bean.Message"/>
 		<mapping class="message.bean.ReMessage" />
+		<mapping class="webinfo.bean.Webinfo" />
 	</session-factory>
 </hibernate-configuration>

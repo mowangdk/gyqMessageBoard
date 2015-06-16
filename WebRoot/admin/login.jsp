@@ -13,7 +13,7 @@
 		<table border="0" align="center" width="760" class="grayline">
 			<tr>
 				<td>
-					<form action="${pageContext.request.contextPath}/admin/login.do" name="form1" method="post">
+					<form action="${pageContext.request.contextPath}/admin/submitlogin.do" name="form1" method="post">
 						<table width="320" border="1" cellpadding="3" bordercolor="#333333" style="border-collapse: collapse;" align=center>
 							<caption style="padding-bottom:10px;font-family:隶书;font-size:25px">
 								管理员登陆
@@ -21,14 +21,14 @@
 							<tr>
 								<td align="center">用户名：</td>
 								<td>
-									<input type="text" name="username" style="width:150px" value="coolszy">
+									<input type="text" name="webinfo.admin" style="width:150px">
 									<span style="color:red"></span> 
 								</td>
 							</tr>
 							<tr>
 								<td align="center">密&nbsp;码：</td>
 								<td>
-									<input type="password" name="password" style="width:150px" value="kuka">
+									<input type="password" name="webinfo.adpass" style="width:150px">
 									<span style="color:red"></span>
 								</td>
 							</tr>
@@ -44,7 +44,7 @@
 			<tr>
 				<td align="center">
 					<font color="red">
-						<html:errors property="loginFail"/>
+					
 					</font>
 				</td>
 			</tr>
